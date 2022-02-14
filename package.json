@@ -39,7 +39,7 @@
   "license": "ISC",
   "datoCmsPlugin": {
     "title": "VoteAmerica Conditional Fields",
-    "previewImage": "docs/preview.gif",
+    "previewImage": "docs/cover.png",
     "coverImage": "docs/cover.png",
     "entryPoint": "dist/index.html",
     "pluginType": "field_addon",
