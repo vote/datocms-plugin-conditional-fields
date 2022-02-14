@@ -1,5 +1,5 @@
 {
-  "name": "datocms-plugin-conditional-fields",
+  "name": "datocms-plugin-voteamerica-conditional-fields",
   "homepage": "https://github.com/vote/datocms-plugin-conditional-fields",
   "version": "1.0.0",
   "description": "Show/hide field value fields based on the associated field type model.",
