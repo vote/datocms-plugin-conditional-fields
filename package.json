@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-conditional-fields",
   "homepage": "https://github.com/vote/datocms-plugin-conditional-fields",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Show/hide field value fields based on the associated field type model.",
   "main": "index.js",
   "scripts": {
@@ -116,7 +116,6 @@
   },
   "dependencies": {
     "datocms-client": "^3.5.14",
-    "html-webpack-tags-plugin": "^2.0.17",
-    "lodash": "^4.17.21"
+    "html-webpack-tags-plugin": "^2.0.17"
   }
 }
