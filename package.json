@@ -1,0 +1,122 @@
+{
+  "name": "datocms-plugin-conditional-fields",
+  "homepage": "https://github.com/vote/datocms-plugin-conditional-fields",
+  "version": "0.0.1",
+  "description": "Show/hide field value fields based on the associated field type model.",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --port 5000",
+    "dist": "NODE_ENV=production webpack --progress",
+    "addToProject": "yo datocms-plugin:add-to-project",
+    "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",
+    "lint": "eslint \"./src/*.{js,jsx}\"",
+    "test": "echo 1"
+  },
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "field-addon",
+    "json-field",
+    "text-field",
+    "boolean-field",
+    "float-field",
+    "integer-field",
+    "string-field",
+    "links-field",
+    "link-field",
+    "date-field",
+    "date-time-field",
+    "video-field",
+    "color-field",
+    "seo-field",
+    "lat-lon-field"
+  ],
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "author": "VoteAmerica <tech@voteamerica.com>",
+  "license": "ISC",
+  "datoCmsPlugin": {
+    "title": "VoteAmerica Conditional Fields",
+    "previewImage": "docs/preview.gif",
+    "coverImage": "docs/cover.png",
+    "entryPoint": "dist/index.html",
+    "pluginType": "field_addon",
+    "fieldTypes": [
+      "json",
+      "text",
+      "boolean",
+      "float",
+      "integer",
+      "string",
+      "links",
+      "link",
+      "date",
+      "date_time",
+      "video",
+      "color",
+      "seo",
+      "lat_lon"
+    ],
+    "parameters": {
+      "global": [
+        {
+          "id": "developmentMode",
+          "label": "Development mode",
+          "type": "boolean",
+          "required": false,
+          "default": false,
+          "hint": "Shows debug messages in console"
+        },
+        {
+          "id": "datoCmsApiToken",
+          "label": "DatoCMS Project API Key",
+          "type": "string",
+          "required": true,
+          "default": false,
+          "hint": "Grab an API key from this very control panel"
+        },
+        {
+          "id": "fieldTypeApiId",
+          "label": "Field Type model API ID number",
+          "type": "string",
+          "required": true,
+          "default": false,
+          "hint": "This is the API ID number of the Field Type model. Pull it from the model in the UI or from the API."
+        }
+      ],
+      "instance": []
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/register": "^7.0.0-beta.54",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.0-beta",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "generator-datocms-plugin": "^1.0.24",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "serve": "^10.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "datocms-client": "^3.5.14",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "lodash": "^4.17.21"
+  }
+}
